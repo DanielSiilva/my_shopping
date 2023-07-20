@@ -6,15 +6,13 @@ import theme from './src/theme/index';
 import {useFonts, Roboto_400Regular, Roboto_500Medium} from '@expo-google-fonts/roboto'
 
 import { Loading } from './src/components/Loading';
-import { Products } from './src/screens/Products';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
     Roboto_400Regular,
     Roboto_500Medium
   })
-
-
 
   return (
     <ThemeProvider theme={theme} >
@@ -24,7 +22,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <Products/> : <Loading />}
+        {fontsLoaded ? <Routes/> : <Loading />}
       </>
     </ThemeProvider>
   );
