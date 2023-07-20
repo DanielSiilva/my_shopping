@@ -1,48 +1,42 @@
-import React from "react"
+import React from 'react';
 
-import {
-  Container,
-  Info,
-  Options,
-  Quantity,
-  Title
-} from './styles'
-import { ButtonIcon } from "../ButtonIcon";
+import { ButtonIcon } from '../ButtonIcon';
+import { Container, Info, Title, Quantity, Options } from './styles';
 
-export type ProductPros = {
+export type ProductProps = {
   id: string;
   description: string;
   quantity: number;
   done: boolean;
 }
 
-export type Props ={
-  data: ProductPros
+type Props = {
+  data: ProductProps;
 }
 
-export function Product({data}: Props){
-
+export function Product({ data }: Props) {
   return (
     <Container>
       <Info>
         <Title done={data.done}>
           {data.description}
         </Title>
+
         <Quantity>
           Quantidade: {data.quantity}
         </Quantity>
-
-        <Options>
-          <ButtonIcon
-            icon={data.done ? "undo" : "check"}
-          />
-
-          <ButtonIcon
-            icon="delete"
-            color="alert"
-          />
-      </Options>
       </Info>
+
+      <Options>
+        <ButtonIcon
+          icon={data.done ? "undo" : "check"}
+        />
+
+        <ButtonIcon
+          icon="delete"
+          color="alert"
+        />
+      </Options>
     </Container>
-  )
+  );
 }
