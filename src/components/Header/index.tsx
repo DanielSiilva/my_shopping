@@ -1,5 +1,5 @@
 import React from "react"
-import {Text} from 'react-native'
+import { ButtonIcon } from "../ButtonIcon";
 
 import {
   Container,
@@ -12,8 +12,6 @@ type Props = {
 }
 
 export function Header({title, showLogoutButton = false}: Props){
-
-
   return (
     <Container showLogoutButton={showLogoutButton}>
       <Title>
@@ -21,7 +19,13 @@ export function Header({title, showLogoutButton = false}: Props){
       </Title>
 
       {
-        showLogoutButton && <Text> Botton</Text>
+        showLogoutButton &&
+        <ButtonIcon
+          icon="logout"
+          color="alert"
+          style={{ marginTop: 20 }}
+          onPress={() => {}}
+        />
       }
     </Container>
   )
