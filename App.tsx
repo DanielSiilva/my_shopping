@@ -1,10 +1,12 @@
-import {Text, StatusBar } from 'react-native';
+import {StatusBar } from 'react-native';
 
 import {ThemeProvider} from 'styled-components/native'
 import theme from './src/theme/index';
 
 import {useFonts, Roboto_400Regular, Roboto_500Medium} from '@expo-google-fonts/roboto'
+
 import { Loading } from './src/components/Loading';
+import { Products } from './src/screens/Products';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,7 +24,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <Text>Carregando ...</Text> : <Loading />}
+        {fontsLoaded ? <Products/> : <Loading />}
       </>
     </ThemeProvider>
   );
