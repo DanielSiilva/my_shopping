@@ -3,14 +3,14 @@ import { FlatList} from 'react-native'
 
 import { Header } from "../../components/Header"
 import {File} from '../../components/File'
+import { Photo } from "../../components/Photo"
+
+import { photosData } from '../../utils/photo.data';
 
 import {
   Container,
   PhotoInfo
 } from './styles'
-
-import { photosData } from '../../utils/photo.data';
-import { Photo } from "../../components/Photo"
 
 export function Receipts(){
   return (
