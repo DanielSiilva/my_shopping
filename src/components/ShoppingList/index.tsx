@@ -2,12 +2,12 @@ import React, {useState} from "react"
 import {FlatList} from 'react-native'
 import {styles} from './styles'
 
-import {Product, ProductPros} from '../Product'
+import {Product, ProductProps} from '../Product'
 
 import {shoppingListExample} from '../../utils/shopping.list.data'
 
 export function ShoppingList(){
-  const [products, setProducts] = useState<ProductPros[]>(shoppingListExample)
+  const [products, setProducts] = useState<ProductProps[]>(shoppingListExample)
 
   return (
     <FlatList
