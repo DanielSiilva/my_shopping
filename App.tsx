@@ -7,6 +7,7 @@ import {useFonts, Roboto_400Regular, Roboto_500Medium} from '@expo-google-fonts/
 
 import { Loading } from './src/components/Loading';
 import { Routes } from './src/routes';
+import {SignIn} from './src/screens/SignIn'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,7 +23,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <Routes/> : <Loading />}
+        {fontsLoaded ? <SignIn/> : <Loading />}
       </>
     </ThemeProvider>
   );
