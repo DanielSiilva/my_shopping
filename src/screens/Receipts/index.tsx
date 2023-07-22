@@ -10,11 +10,14 @@ import {
 } from './styles'
 
 import { photosData } from '../../utils/photo.data';
+import { Photo } from "../../components/Photo"
 
 export function Receipts(){
   return (
     <Container>
       <Header title="Comprovantes" />
+
+       <Photo uri=""/>
 
       <PhotoInfo>
         Informações da foto
