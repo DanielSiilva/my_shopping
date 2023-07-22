@@ -2,6 +2,7 @@ import React from "react"
 import { FlatList} from 'react-native'
 
 import { Header } from "../../components/Header"
+import {File} from '../../components/File'
 
 import {
   Container,
@@ -23,7 +24,11 @@ export function Receipts(){
         data={photosData}
         keyExtractor={item => item.name}
         renderItem={({item}) => (
-          
+          <File 
+            data={item}
+            onShow={() => {}}
+            onDelete={() => {}}
+          />
         )}
         contentContainerStyle={{paddingBottom: 100}}
         showsVerticalScrollIndicator={false}
