@@ -1,15 +1,16 @@
 import React, {useState} from 'react'
 import * as ImagePicker from 'expo-image-picker'
 
+import { Header } from '../../components/Header'
+import { Photo } from '../../components/Photo'
+import { Button } from '../../components/Button'
+
 import {
   Container,
   Content,
   Progress,
   Transferred
 } from './styles'
-import { Header } from '../../components/Header'
-import { Photo } from '../../components/Photo'
-import { Button } from '../../components/Button'
 
 export function Upload(){
   const [image, setImage] = useState('')
